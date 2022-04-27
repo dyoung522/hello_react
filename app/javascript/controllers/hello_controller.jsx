@@ -1,7 +1,10 @@
-import { Controller } from "@hotwired/stimulus"
+import * as React from "react";
+import { Controller } from "@hotwired/stimulus";
+import { createRoot } from "react-dom/client";
+import Hello from "../components/Hello";
 
-// Connects to data-controller="hello"
 export default class extends Controller {
   connect() {
+    createRoot(this.element).render(<Hello />);
   }
 }
